@@ -154,7 +154,7 @@ export default function Header() {
         {/* Mobile Navigation */}
         {open && (
           <div
-            className="border-t px-6 py-8 md:hidden"
+            className="border-t px-6 pt-2 pb-4 md:hidden"
             style={{
               background: "var(--background)",
               borderColor: "var(--border)",
@@ -166,7 +166,7 @@ export default function Header() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="group flex items-center justify-between border-b py-5 text-2xl font-medium transition-colors duration-300 hover:text-emerald-500"
+                  className="group flex items-center justify-between border-b py-4 text-xl font-medium transition-colors duration-300 hover:text-emerald-500"
                   style={{
                     borderColor: "var(--border)",
                     color: "var(--foreground)",
@@ -188,7 +188,7 @@ export default function Header() {
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="mt-6 flex w-full items-center justify-center border py-4 text-xs uppercase tracking-[0.2em] transition-all duration-300 hover:border-emerald-600 hover:bg-emerald-600 hover:text-white"
+              className="mt-4 flex w-full items-center justify-center border py-3 text-xs uppercase tracking-[0.2em] transition-all duration-300 hover:border-emerald-600 hover:bg-emerald-600 hover:text-white"
               style={{
                 borderColor: "var(--border)",
                 color: "var(--foreground)",
