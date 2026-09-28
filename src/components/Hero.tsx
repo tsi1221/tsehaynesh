@@ -100,10 +100,10 @@ export default function Hero() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 mx-auto w-full max-w-[1400px] px-6 pb-16 pt-40 md:px-10 md:pb-20">
+        <div className="relative z-10 mx-auto w-full max-w-[1400px] px-6 pb-10 pt-28 md:px-10 md:pb-20 md:pt-40">
           {/* Top meta */}
           <div
-            className="mb-8 flex items-center justify-between text-xs uppercase tracking-[0.25em]"
+            className="mb-6 flex items-center justify-between text-[10px] uppercase tracking-[0.25em] md:mb-8 md:text-xs"
             style={{ color: "var(--muted)" }}
           >
             <span>Software Engineer</span>
@@ -112,7 +112,7 @@ export default function Hero() {
 
           {/* Big title */}
           <div className="max-w-6xl">
-            <h1 className="mt-24 text-[15vw] font-bold leading-[0.82] tracking-[-0.07em] md:text-[10vw]">
+            <h1 className="mt-8 text-[15vw] font-bold leading-[0.82] tracking-[-0.07em] md:mt-24 md:text-[10vw]">
               <span className="block">Tsehaynesh</span>
               <span className="mt-[0.10em] block">
                 Biruh
@@ -123,7 +123,7 @@ export default function Hero() {
 
           {/* Full-Stack Developer — between title and description */}
           <p
-            className="mt-10 flex items-center gap-3 text-sm uppercase tracking-[0.3em] md:mt-12"
+            className="mt-5 flex items-center gap-3 text-xs uppercase tracking-[0.3em] md:mt-12 md:text-sm"
             style={{ color: GREEN }}
           >
             <span
@@ -137,9 +137,9 @@ export default function Hero() {
           </p>
 
           {/* Bottom row */}
-          <div className="mt-10 flex flex-col justify-between gap-8 md:flex-row md:items-end">
+          <div className="mt-6 flex flex-col justify-between gap-6 md:mt-10 md:flex-row md:items-end md:gap-8">
             <p
-              className="max-w-xl text-base leading-7 md:text-lg"
+              className="max-w-xl text-sm leading-6 md:text-lg md:leading-7"
               style={{ color: "var(--muted)" }}
             >
               I build modern digital products across frontend, backend, and
@@ -151,7 +151,7 @@ export default function Hero() {
             <div className="flex flex-wrap items-center gap-3">
               <a
                 href="#work"
-                className="group flex w-fit items-center gap-4 border px-6 py-4 text-xs uppercase tracking-[0.2em] transition-all duration-300 hover:border-emerald-600 hover:bg-emerald-600 hover:text-white"
+                className="group flex w-fit items-center gap-3 border px-4 py-3 text-[10px] uppercase tracking-[0.2em] transition-all duration-300 hover:border-emerald-600 hover:bg-emerald-600 hover:text-white md:gap-4 md:px-6 md:py-4 md:text-xs"
                 style={{
                   borderColor: "var(--border)",
                   color: "var(--foreground)",
@@ -168,7 +168,7 @@ export default function Hero() {
               <a
                 href="/Tsehaynesh_Biruh_Resume.pdf"
                 download="Tsehaynesh_Biruh_Resume.pdf"
-                className="group relative flex w-fit items-center gap-3 overflow-hidden border px-6 py-4 text-xs uppercase tracking-[0.2em] text-white transition-all duration-300 hover:shadow-[0_10px_40px_-10px_rgba(22,163,74,0.7)]"
+                className="group relative flex w-fit items-center gap-2 overflow-hidden border px-4 py-3 text-[10px] uppercase tracking-[0.2em] text-white transition-all duration-300 hover:shadow-[0_10px_40px_-10px_rgba(22,163,74,0.7)] md:gap-3 md:px-6 md:py-4 md:text-xs"
                 style={{
                   borderColor: GREEN,
                   background: `linear-gradient(120deg, ${GREEN}, ${GREEN_BRIGHT})`,
