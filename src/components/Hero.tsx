@@ -112,7 +112,7 @@ export default function Hero() {
 
           {/* Big title */}
           <div className="max-w-6xl">
-            <h1 className="mt-8 text-[15vw] font-bold leading-[0.82] tracking-[-0.07em] md:mt-24 md:text-[10vw]">
+            <h1 className="text-[15vw] font-bold leading-[0.82] tracking-[-0.07em] md:mt-24 md:text-[10vw]">
               <span className="block">Tsehaynesh</span>
               <span className="mt-[0.10em] block">
                 Biruh
