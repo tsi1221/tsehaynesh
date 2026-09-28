@@ -16,7 +16,9 @@ export default function Hero() {
   const [showCard, setShowCard] = useState(false);
   const [expanded, setExpanded] = useState(false);
 
-  /* Addis Ababa clock */
+  /* =========================================================
+     ADDIS ABABA CLOCK
+  ========================================================= */
   useEffect(() => {
     const updateTime = () => {
       const formatter = new Intl.DateTimeFormat("en-US", {
@@ -34,13 +36,17 @@ export default function Hero() {
     return () => window.clearInterval(interval);
   }, []);
 
-  /* Show achievement after 4s */
+  /* =========================================================
+     SHOW ACHIEVEMENT CARD AFTER 4s
+  ========================================================= */
   useEffect(() => {
     const timer = window.setTimeout(() => setShowCard(true), 4000);
     return () => window.clearTimeout(timer);
   }, []);
 
-  /* Escape closes */
+  /* =========================================================
+     ESC CLOSES CARD
+  ========================================================= */
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key !== "Escape") return;
@@ -58,7 +64,7 @@ export default function Hero() {
   return (
     <>
       {/* =====================================================
-          STICKY HERO — pins to viewport, sections scroll over it
+          STICKY HERO
       ===================================================== */}
       <section
         id="home"
@@ -95,6 +101,7 @@ export default function Hero() {
 
         {/* Content */}
         <div className="relative z-10 mx-auto w-full max-w-[1400px] px-6 pb-16 pt-40 md:px-10 md:pb-20">
+          {/* Top meta */}
           <div
             className="mb-8 flex items-center justify-between text-xs uppercase tracking-[0.25em]"
             style={{ color: "var(--muted)" }}
@@ -103,15 +110,9 @@ export default function Hero() {
             <span className="font-mono">ADDIS ABABA · {time}</span>
           </div>
 
+          {/* Big title */}
           <div className="max-w-6xl">
-            <p
-              className="mb-8 mt-4 text-sm uppercase tracking-[0.3em] md:mb-10"
-              style={{ color: GREEN }}
-            >
-              Full-Stack Developer
-            </p>
-
-            <h1 className="text-[15vw] font-bold leading-[0.82] tracking-[-0.07em] md:text-[10vw]">
+            <h1 className="mt-24 text-[15vw] font-bold leading-[0.82] tracking-[-0.07em] md:text-[10vw]">
               <span className="block">Tsehaynesh</span>
               <span className="mt-[0.10em] block">
                 Biruh
@@ -120,7 +121,23 @@ export default function Hero() {
             </h1>
           </div>
 
-          <div className="mt-14 flex flex-col justify-between gap-8 md:flex-row md:items-end">
+          {/* Full-Stack Developer — between title and description */}
+          <p
+            className="mt-10 flex items-center gap-3 text-sm uppercase tracking-[0.3em] md:mt-12"
+            style={{ color: GREEN }}
+          >
+            <span
+              className="h-1.5 w-1.5 animate-pulse rounded-full"
+              style={{
+                background: GREEN_BRIGHT,
+                boxShadow: `0 0 10px ${GREEN_BRIGHT}`,
+              }}
+            />
+            Full-Stack Developer
+          </p>
+
+          {/* Bottom row */}
+          <div className="mt-10 flex flex-col justify-between gap-8 md:flex-row md:items-end">
             <p
               className="max-w-xl text-base leading-7 md:text-lg"
               style={{ color: "var(--muted)" }}
@@ -147,7 +164,7 @@ export default function Hero() {
                 />
               </a>
 
-              {/* Download Resume */}
+              {/* Download resume */}
               <a
                 href="/Tsehaynesh_Biruh_Resume.pdf"
                 download="Tsehaynesh_Biruh_Resume.pdf"
@@ -157,7 +174,6 @@ export default function Hero() {
                   background: `linear-gradient(120deg, ${GREEN}, ${GREEN_BRIGHT})`,
                 }}
               >
-                {/* Shimmer sweep */}
                 <span
                   aria-hidden
                   className="pointer-events-none absolute inset-y-0 -left-1/2 w-1/2 -translate-x-full transition-transform duration-1000 group-hover:translate-x-[300%]"
@@ -180,7 +196,7 @@ export default function Hero() {
       </section>
 
       {/* =====================================================
-          ACHIEVEMENT CARD
+          FLOATING ACHIEVEMENT CARD
       ===================================================== */}
       <aside
         aria-hidden={!showCard}
